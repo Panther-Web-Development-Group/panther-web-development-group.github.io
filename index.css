@@ -44,7 +44,11 @@
 }
 
 #logo__image {
-	height: clamp(90px, 6em, 125px);
+	max-width: 100%;
+	max-height: 180px;
+	height: auto;
+	margin: auto;
+	padding: auto;
 	vertical-align: middle;
 }
 
