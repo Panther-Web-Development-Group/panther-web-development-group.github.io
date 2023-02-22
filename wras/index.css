@@ -14,6 +14,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 1.2em;
+	gap: 1em;
 }
 
 #wras-branding {
@@ -78,4 +79,14 @@
 
 #wras-navigation .wras-subnav {
 	display: none;
+}
+
+#wras-navigation .wras-subnav > .wras-subnav__items {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#wras-navigation__items > .wras-navigation__item:hover > .wras-subnav {
+	display: flex;
 }
