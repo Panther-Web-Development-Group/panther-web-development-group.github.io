@@ -77,7 +77,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 12px;
-	position: static;
+	position: relative;
+	z-index: 2500;
 	transition: all 300ms ease-in;
 }
 
@@ -314,6 +315,7 @@
 
 /* Hero image */
 #hero {
+	z-index: 2000;
 	position: relative;
 }
 
