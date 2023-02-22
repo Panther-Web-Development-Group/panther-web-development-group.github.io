@@ -3,6 +3,7 @@
 	--fg: hsl(240, 70%, 95%);
 	--nav: hsl(226, 70%, 15%);
 	--search: hsl(234, 67%, 12%);
+	--hero-bg: hsl(240, 30%, 8%, 80%);
 	--footer: hsl(227, 74%, 12%);
 	--hover: hsl(240, 75%, 96%);
 	--hover-fg: hsl(240, 85%, 10%);
@@ -310,6 +311,29 @@
 .mobile #content__inner {
 	flex-direction: column;
 }
+
+/* Hero image */
+#hero {
+	position: relative;
+}
+
+#hero__text {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	background-color: var(--hero-bg);
+	backdrop-filter: blur(2px);
+	padding: 12px 20px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#hero__image {
+	aspect-ratio: 16 / 9;
+	width: 100%;
+}
+
 /* Footer */
 #footer {
 	background-color: var(--footer);
