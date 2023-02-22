@@ -13,142 +13,178 @@
 	<script src="/index.js" type="application/javascript" defer></script>
 </head>
 <body class="body" id="body">
-    <div class="container" id="container">
-        <header class="header" id="header">
-            <h1 class="title" id="title">
-                <a href="/" class="logo" id="logo">
-                    <img src="/assets/logo-h.png" alt="Panther Web Development Group" class="logo__image" id="logo__image" />
-                </a>
-            </h1>
-            <nav class="navigation" id="navigation">
-                <div class="navigation__container" id="navigation__container">
-					<div class="navigation__trigger trigger" id="navigation__trigger">
-						<button class="navigation__trigger-button trigger-button" id="navigation__trigger-button">
-							<i class="fa fa-bars"></i>
+	<header class="header" id="header">
+		<h1 class="title" id="title">
+			<a href="/" class="logo" id="logo">
+				<img src="/assets/logo-h.png" alt="Panther Web Development Group" class="logo__image" id="logo__image" />
+			</a>
+		</h1>
+		<nav class="navigation" id="navigation">
+			<div class="navigation__container" id="navigation__container">
+				<div class="navigation__trigger trigger" id="navigation__trigger">
+					<button class="navigation__trigger-button trigger-button" id="navigation__trigger-button">
+						<i class="fa fa-bars"></i>
+					</button>
+				</div>
+				<section class="navigation__inner" id="navigation__inner">
+					<div class="navigation__close" id="navigation__close">
+						<button class="navigation__close-button" id="navigation__close-button">
+							<i class="fa fa-close"></i>
 						</button>
 					</div>
-					<section class="navigation__inner" id="navigation__inner">
-						<div class="navigation__close" id="navigation__close">
-							<button class="navigation__close-button" id="navigation__close-button">
-								<i class="fa fa-close"></i>
-							</button>
-						</div>
-						<ul class="navigation__items" id="navigation__items">
-							<li class="navigation__item">
-								<a href="/" class="navigation__link">Home</a>
-							</li>
-							<li class="navigation__item">
-								<a href="/about" class="navigation__link">About</a>
-							</li>
-							<li class="navigation__item">
-								<a href="/news" class="navigation__link">News</a>
-							</li>
-							<li class="navigation__item">
-								<a href="/events" class="navigation__link">Events</a>
-							</li>
-							<li class="navigation__item">
-								<a href="/photos" class="navigation__link">Photos</a>
-							</li>
-							<li class="navigation__item">
-								<a href="/contact" class="navigation__link">Contact</a>
-								<div class="subnav">
-									<ul class="subnav__items">
-										<li class="subnav__item">
-											<a href="#" class="subnav__link">Panther Involvement Network</a>
-										</li>
-										<li class="subnav__item">
-											<a href="#" class="subnav__link">Discord</a>
-										</li>
-										<li class="subnav__item">
-											<a href="#" class="subnav__link">E-mail</a>
-										</li>
-										<li class="subnav__item">
-											<a href="#" class="subnav__link">Instagram</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-						</ul>
-					</section>
-                </div>
-				<div class="search-wrapper" id="search-wrapper">
-					<div class="search__trigger trigger" id="search__trigger">
-						<button class="search__trigger-button trigger-button" id="search__trigger-button">
+					<ul class="navigation__items" id="navigation__items">
+						<li class="navigation__item">
+							<a href="/about" class="navigation__link">About</a>
+						</li>
+						<li class="navigation__item">
+							<a href="/projects" class="navigation__link">Projects</a>
+							<div class="subnav">
+								<ul class="subnav__items">
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">WRAS Website Project</a>
+									</li>
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">Panther Web Development Group</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="navigation__item">
+							<a href="/news" class="navigation__link">News</a>
+						</li>
+						<li class="navigation__item">
+							<a href="/events" class="navigation__link">Events</a>
+						</li>
+						<li class="navigation__item">
+							<a href="/photos" class="navigation__link">Photos</a>
+						</li>
+						<li class="navigation__item">
+							<a href="/contact" class="navigation__link">Contact</a>
+							<div class="subnav">
+								<ul class="subnav__items">
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">Panther Involvement Network</a>
+									</li>
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">Discord</a>
+									</li>
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">E-mail</a>
+									</li>
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">Instagram</a>
+									</li>
+									<li class="subnav__item">
+										<a href="#" class="subnav__link">Twitter</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="search-wrapper" id="search-wrapper">
+				<div class="search__trigger trigger" id="search__trigger">
+					<button class="search__trigger-button trigger-button" id="search__trigger-button">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+				<form action="/search" method="POST" class="search" id="search">
+					<div class="search__close" id="search__close">
+						<button class="search__close-button" id="search__close-button">
+							<i class="fa fa-close"></i>
+						</button>
+					</div>
+					<div class="search__inner" id="search__inner">
+						<label for="search__input" class="search__label" id="search__label">
+							<span class="search__label-text" id="search__label-text">Search</span>
+						</label>
+						<input type="search" class="search__input" id="search__input">
+						<button type="submit" class="search__submit" id="search__submit">
 							<i class="fa fa-search"></i>
 						</button>
 					</div>
-					<form action="/search" method="POST" class="search" id="search">
-						<div class="search__close" id="search__close">
-							<button class="search__close-button" id="search__close-button">
-								<i class="fa fa-close"></i>
-							</button>
-						</div>
-						<div class="search__inner" id="search__inner">
-							<label for="search__input" class="search__label" id="search__label">
-								<span class="search__label-text" id="search__label-text">Search</span>
-							</label>
-							<input type="search" class="search__input" id="search__input">
-							<button type="submit" class="search__submit" id="search__submit">
-								<i class="fa fa-search"></i>
-							</button>
-						</div>
-					</form>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<main class="content" id="content">
+		<div class="hero" id="hero">
+			<section class="hero__text" id="hero__text"></section>
+			<img src="" alt="" class="hero__image" id="hero__image">
+		</div>
+		<div class="content__inner" id="content__inner">
+			<section class="left-column" id="left-column">
+				<div class="section">
+					<h1 class="section__title">1</h1>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque iste repellat omnis doloribus ad quo explicabo facilis! Ab odio veritatis excepturi, assumenda, animi minima cum sunt, minus soluta at accusantium maxime dolore officiis ullam? Consectetur delectus recusandae maiores cupiditate velit eius, vero aut deleniti modi itaque adipisci perspiciatis officiis esse labore consequuntur? Praesentium, veritatis! Ipsum qui aliquam illum tenetur vel!</p>
 				</div>
-            </nav>
-        </header>
-        <main class="content" id="content">
-			<div class="hero" id="hero">
-				<section class="hero__text" id="hero__text"></section>
-				<img src="" alt="" class="hero__image" id="hero__image">
+				<div class="section">
+					<h1 class="section__title">2</h1>
+					<p>Sapiente vero quasi commodi deserunt ea velit exercitationem quas? Fuga eum eaque sunt dolorum rem maiores eveniet quos, facilis ea reiciendis error minima mollitia aperiam dolores doloremque tempore modi. Eligendi quo asperiores harum aliquid molestiae accusamus fugiat voluptatem, labore porro in odio suscipit corporis repellendus totam eveniet optio nisi rem officiis doloribus facilis, quam voluptate obcaecati. Sed tenetur tempore provident?</p>
+				</div>
+				<div class="section">
+					<h1 class="section__title">3</h1>
+					<p>Vel nemo deserunt veritatis ad fugit. Inventore vitae accusantium iusto eius asperiores quisquam, quo ipsum a voluptates. Rem laudantium illum quos et earum neque est odio magni quod accusantium. Laudantium culpa expedita, pariatur placeat nam enim, ad distinctio at odit cum eos earum eius consequuntur? Consectetur voluptatem repudiandae magni ullam illo obcaecati, harum, odit quam quo, explicabo deleniti doloribus possimus.</p>
+				</div>
+				<div class="section">
+					<h1 class="section__title">4</h1>
+					<p>Asperiores animi impedit dicta nihil consectetur, facere nam non sunt quam facilis recusandae eius vitae sint voluptatem praesentium est sequi aperiam accusamus. Quia hic assumenda autem facilis fugiat ab eum placeat asperiores, atque doloribus unde, odio amet sequi fuga possimus in? Omnis repellendus ipsam consequuntur! Necessitatibus quam temporibus eveniet est ipsam saepe nisi, ex laboriosam dolores sed error qui sit.</p>
+				</div>
+				<div class="section">
+					<h1 class="section__title">5</h1>
+					<p>Eius tempora saepe accusantium, sit ea fugit blanditiis quae eos sunt consequatur, possimus alias temporibus consequuntur facilis ipsum doloremque non fugiat architecto maiores voluptate, nulla in! Doloremque accusantium pariatur veritatis, officia mollitia hic, voluptatum fuga suscipit nostrum temporibus necessitatibus, tenetur maiores sapiente! In cupiditate dolore aut quisquam iste animi quidem cumque debitis accusamus itaque, architecto blanditiis nobis iusto velit odio.</p>
+				</div>
+			</section>
+			<aside class="right-column" id="right-column">
+				<div class="section">
+					<h1 class="section__title">1</h1>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque expedita libero voluptates nemo perspiciatis in adipisci, beatae aliquid soluta debitis, ad inventore. Doloremque, qui accusamus quas neque praesentium consequuntur?</p>
+				</div>
+				<div class="section">
+					<h1 class="section__title">2</h1>
+					<p>Maiores alias esse ab voluptas blanditiis dignissimos est sed similique delectus, ex nemo consectetur minima porro excepturi earum, numquam necessitatibus odio eius quam nobis ipsam rerum, temporibus illo aut? Praesentium?</p>
+				</div>
+				<div class="section">
+					<h1 class="section__title">3</h1>
+					<p>At hic voluptatum totam ipsam alias, laudantium accusantium. Debitis harum quibusdam culpa? Provident dolor nostrum doloribus aperiam adipisci tempore asperiores accusamus quibusdam tenetur quidem. Cupiditate dolorem impedit eos neque aperiam.</p>
+				</div>
+			</aside>
+		</div>
+	</main>
+	<footer class="footer" id="footer">
+		<section class="footer__section">
+			<h3 class="footer__logo" id="footer__logo">
+				<img src="/assets/logo-transparent-short.png" alt="PantherWeb" class="footer__logo-image" id="footer__logo-image" />
+			</h3>
+		</section>
+		<section class="footer__section">
+			<nav class="footer__nav"></nav>
+			<div class="footer__tagline">
+				<p>Copyright &copy; 2023 &mdash; Panther Web Development Group</p>
 			</div>
-			<div class="content__inner" id="content__inner">
-				<section class="left-column" id="left-column">
-					<div class="section">
-						<h1 class="section__title">1</h1>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque iste repellat omnis doloribus ad quo explicabo facilis! Ab odio veritatis excepturi, assumenda, animi minima cum sunt, minus soluta at accusantium maxime dolore officiis ullam? Consectetur delectus recusandae maiores cupiditate velit eius, vero aut deleniti modi itaque adipisci perspiciatis officiis esse labore consequuntur? Praesentium, veritatis! Ipsum qui aliquam illum tenetur vel!</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">2</h1>
-						<p>Sapiente vero quasi commodi deserunt ea velit exercitationem quas? Fuga eum eaque sunt dolorum rem maiores eveniet quos, facilis ea reiciendis error minima mollitia aperiam dolores doloremque tempore modi. Eligendi quo asperiores harum aliquid molestiae accusamus fugiat voluptatem, labore porro in odio suscipit corporis repellendus totam eveniet optio nisi rem officiis doloribus facilis, quam voluptate obcaecati. Sed tenetur tempore provident?</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">3</h1>
-						<p>Vel nemo deserunt veritatis ad fugit. Inventore vitae accusantium iusto eius asperiores quisquam, quo ipsum a voluptates. Rem laudantium illum quos et earum neque est odio magni quod accusantium. Laudantium culpa expedita, pariatur placeat nam enim, ad distinctio at odit cum eos earum eius consequuntur? Consectetur voluptatem repudiandae magni ullam illo obcaecati, harum, odit quam quo, explicabo deleniti doloribus possimus.</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">4</h1>
-						<p>Asperiores animi impedit dicta nihil consectetur, facere nam non sunt quam facilis recusandae eius vitae sint voluptatem praesentium est sequi aperiam accusamus. Quia hic assumenda autem facilis fugiat ab eum placeat asperiores, atque doloribus unde, odio amet sequi fuga possimus in? Omnis repellendus ipsam consequuntur! Necessitatibus quam temporibus eveniet est ipsam saepe nisi, ex laboriosam dolores sed error qui sit.</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">5</h1>
-						<p>Eius tempora saepe accusantium, sit ea fugit blanditiis quae eos sunt consequatur, possimus alias temporibus consequuntur facilis ipsum doloremque non fugiat architecto maiores voluptate, nulla in! Doloremque accusantium pariatur veritatis, officia mollitia hic, voluptatum fuga suscipit nostrum temporibus necessitatibus, tenetur maiores sapiente! In cupiditate dolore aut quisquam iste animi quidem cumque debitis accusamus itaque, architecto blanditiis nobis iusto velit odio.</p>
-					</div>
-				</section>
-				<aside class="right-column" id="right-column">
-					<div class="section">
-						<h1 class="section__title">1</h1>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum atque expedita libero voluptates nemo perspiciatis in adipisci, beatae aliquid soluta debitis, ad inventore. Doloremque, qui accusamus quas neque praesentium consequuntur?</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">2</h1>
-						<p>Maiores alias esse ab voluptas blanditiis dignissimos est sed similique delectus, ex nemo consectetur minima porro excepturi earum, numquam necessitatibus odio eius quam nobis ipsam rerum, temporibus illo aut? Praesentium?</p>
-					</div>
-					<div class="section">
-						<h1 class="section__title">3</h1>
-						<p>At hic voluptatum totam ipsam alias, laudantium accusantium. Debitis harum quibusdam culpa? Provident dolor nostrum doloribus aperiam adipisci tempore asperiores accusamus quibusdam tenetur quidem. Cupiditate dolorem impedit eos neque aperiam.</p>
-					</div>
-				</aside>
-			</div>
-        </main>
-        <footer class="footer" id="footer">
-            <section class="footer__section">
-                <h3 class="footer__logo" id="footer__logo">
-                    <img src="/assets/logo-transparent-short.png" alt="PantherWeb" class="footer__logo-image" id="footer__logo-image" />
-                </h3>
-            </section>
-            <section class="footer__section"></section>
-            <section class="footer__section"></section>
-        </footer>
-    </div>   
+		</section>
+		<section class="footer__section">
+			<nav class="footer__social-menu" id="footer__social-menu">
+				<ul class="footer__socials" id="footer__socials">
+					<li class="social-item">
+						<a href="#" class="social-link instagram" id="instagram">
+							<i class="fa fa-instagram"></i>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="#" class="social-link twitter" id="twitter">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<li class="social-item">
+						<a href="#" class="social-link email" id="email">
+							<i class="fa fa-envelope"></i>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	</footer>
 </body>
 </html>

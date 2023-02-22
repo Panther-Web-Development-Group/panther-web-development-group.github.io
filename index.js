@@ -4,6 +4,23 @@ const navigationTrigger = document.querySelector( "button#navigation__trigger-bu
 const navigationClose = document.querySelector( "button#navigation__close-button" );
 const navigationContainer = document.querySelector( "#navigation__inner" );
 
+const initStickyNav = ( ) => { 
+	const navigation = document.querySelector( "#navigation" );
+	const navigationRect = navigation.getBoundingClientRect( );
+
+	const header = navigation.parentElement;
+	const headerRect = header.getBoundingClientRect( );
+
+	const pos = Math.ceil( headerRect.height - navigationRect.height ) + 12;
+	
+	window.addEventListener( "scroll", ( ) => { 
+		const isOffset = window.scrollY > pos;
+		navigation.classList.toggle( "sticky", isOffset );
+	} );
+};
+
+initStickyNav( );
+
 navigationTrigger.addEventListener( "click", ( ) => { 
 	navigationContainer.classList.toggle( "show" );
 } );

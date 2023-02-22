@@ -3,10 +3,18 @@
 	--fg: hsl(240, 70%, 95%);
 	--nav: hsl(226, 70%, 15%);
 	--search: hsl(234, 67%, 12%);
+	--footer: hsl(227, 74%, 12%);
 	--hover: hsl(240, 75%, 96%);
 	--hover-fg: hsl(240, 85%, 10%);
 	--subnav-hover: hsl(240, 80%, 6%, 20%);
 	--mobile-nav-blackout: hsl(240, 60%, 4%, 90%);
+
+	--content-gap-x: 12px;
+	--content-gap-y: 17px;
+}
+
+*, ::before, ::after {
+	box-sizing: border-box;
 }
 
 #body {
@@ -14,11 +22,7 @@
 	color: var(--fg);
 	font-family: Exo, Helvetica, Arial, sans-serif;
 	margin: auto;
-	position: sticky;
-}
-
-#container {
-	padding: 12px 17px;
+	padding: var(--content-gap-x) var(--content-gap-y);
 }
 
 #header {
@@ -72,6 +76,8 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 12px;
+	position: static;
+	transition: all 300ms ease-in;
 }
 
 #navigation__container {
@@ -123,6 +129,7 @@
 	font-size: 0.9em;
 	display: none;
 	min-width: 200px;
+	overflow: hidden;
 	position: absolute;
 	left: 0;
 	top: 100%;
@@ -152,6 +159,17 @@
 
 #navigation__items > .navigation__item:hover > .subnav {
 	display: flex;
+}
+
+/* Sticky navigation */
+#header:has(#navigation.sticky) {
+	margin-bottom: 45px;
+}
+
+#navigation.sticky {
+	position: fixed;
+	top: 8px;
+	width: calc(100% - var(--content-gap-x) * 3);
 }
 
 /* Mobile navigation */
@@ -270,4 +288,83 @@
 	#search__trigger {
 		display: inline-block;
 	}
+}
+
+/* Content */
+#content {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 13px;
+}
+
+#content__inner {
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+}
+
+#left__column {
+	flex-grow: 1;
+}
+
+.mobile #content__inner {
+	flex-direction: column;
+}
+/* Footer */
+#footer {
+	background-color: var(--footer);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 20px;
+}
+
+#footer__logo {
+	margin: 0;
+	padding: 0;
+}
+
+#footer__logo-image {
+	max-height: 150px;
+}
+
+#footer__social-menu {
+	display: flex;
+}
+
+#footer__socials {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer__socials > .social-item {
+	font-size: 1.4em;	
+}
+
+#footer__socials > .social-item > .social-link {
+	display: block;
+	color: inherit;
+	padding: 8px;
+}
+
+/* Mobile footer */
+.mobile #footer {
+	flex-direction: column;	
+}
+
+.mobile .footer__section:has(#footer__logo) {
+	order: 0;
+}
+
+.mobile #footer__socials {
+	flex-direction: row;
+}
+
+.mobile .footer__section:has(#footer__socials) {
+	order: 1;
 }
