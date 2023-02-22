@@ -74,11 +74,12 @@
 #wras-navigation__items > .wras-navigation__item > .wras-navigation__link {
 	text-decoration: none;
 	color: inherit;
-	padding: 16px 23px;
+	padding: 12px 18px;
 }
 
 #wras-navigation .wras-subnav {
 	display: none;
+	top: 100%;
 }
 
 #wras-navigation .wras-subnav > .wras-subnav__items {
@@ -86,7 +87,21 @@
 	margin: 0;
 	padding: 0;
 }
+#wras-navigation__items > .wras-navigation__item:hover > .wras-navigation__link {
+	border-top: 3px solid;
+}
 
 #wras-navigation__items > .wras-navigation__item:hover > .wras-subnav {
 	display: flex;
+}
+
+#wras-navigation .wras-subnav > .wras-subnav__items > .wras-subnav__item { 
+	font-size: 0.8em;
+}
+
+#wras-navigation .wras-subnav > .wras-subnav__items > .wras-subnav__item > .wras-subnav__link {
+	color: inherit;
+	display: block;
+	padding: 2px 4px;
+	text-decoration: none;
 }
