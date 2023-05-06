@@ -44,14 +44,14 @@ const calcMaxHeight = items => Array.from(items).reduce((maxHeight, item) => {
 	return Math.max(height, maxHeight);
 }, 0);
 
-const requestInterval = (fn, delay, ...args) => {
+const requestInterval = function(fn, delay, ...args) {
 	let start = Date.now(), handler = {};
 
 	const loop = () => {
 		let current = Date.now(), delta = current - start;
 		
 		if (delta >= delay) {
-			fn.call(null, ...args);
+			fn.call(this, ...args);
 			start = Date.now();
 		}
 

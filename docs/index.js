@@ -26,5 +26,3 @@ class PantherWeb {
 }
 
 PantherWeb.createSlideshow();
-
-console.log(PantherWeb.slideshow);
