@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Canvas Test - Panther Web Development Group</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Welcome to the Panther Web Development Group, the organization for learning about web development and creating websites." />
+	<meta name="keywords" content="Panther Web Development Group, PantherWeb, pantherweb-gsu" />
+	<meta name="" content="" />
+	<link rel="stylesheet" href="index.css" type="text/css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo|Righteous" type="text/css" />
+	<script src="https://kit.fontawesome.com/937de8c95f.js" crossorigin="anonymous"></script>
+	<script src="util.js" type="text/javascript"></script>
+</head>
+<body class="body" id="body">
+	<div class="container" id="container">
+		<header class="header" id="header">
+			<div class="header-top" id="header-top">
+				<form class="search-container" id="search-container">
+					<div class="search-trigger" id="search-trigger">
+						<button class="search-trigger-button" id="search-trigger-button">
+							<span class="search-trigger-text">Search</span><i class="fa fa-search"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+			<div class="header-bottom" id="header-bottom">
+				<h1 class="title" id="title">
+					<a href="/" class="logo" id="logo">
+						<img src="assets/logos/logo-short.png" alt="PantherWeb" class="logo-image" id="logo-image" />
+					</a>
+				</h1>
+				<nav class="navigation" id="navigation">
+					<ul class="nav" id="nav">
+						<li class="nav-item">
+							<a href="#" class="nav-link">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Events</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Photos</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<main class="content-wrapper" id="content-wrapper">
+			<header class="main-header" id="main-header">
+				<section class="hero-slider slider" id="hero-slideshow" data-loop data-auto-seek>
+					<figure class="slide">
+						<img src="assets/images/example-1.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus illo itaque explicabo quam similique veniam maiores voluptatem? Aliquid, tempore dolores? Magni, non similique.</div>
+						</figcaption>
+					</figure>
+					<figure class="slide">
+						<img src="assets/images/example-2.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">No description</div>
+						</figcaption>
+					</figure>
+					<figure class="slide">
+						<img src="assets/images/example-3.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">No description</div>
+						</figcaption>
+					</figure>
+					<figure class="slide">
+						<img src="assets/images/example-4.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">No description</div>
+						</figcaption>
+					</figure>
+					<figure class="slide">
+						<img src="assets/images/example-5.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">No description</div>
+						</figcaption>
+					</figure>
+					<figure class="slide">
+						<img src="assets/images/example-6.jpg" alt="" class="slide-image">
+						<figcaption class="slide-caption">
+							<h3 class="slide-title">No title</h3>
+							<div class="slide-description">No description</div>
+						</figcaption>
+					</figure>
+				</section>
+			</header>
+			<article class="content" id="content">
+				<div class="canvas-wrapper" id="canvas-wrapper">
+					<canvas class="canvas" id="canvas"></canvas>
+				</div>
+			</article>
+		</main>
+		<footer class="footer" id="footer"></footer>
+	</div>
+	<script src="canvas.js" type="text/javascript"></script>
+	<script src="index.js" type="text/javascript"></script>
+</body>
+</html>
